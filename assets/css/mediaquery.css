@@ -1,0 +1,32 @@
+@media screen and (max-width: 600px) {
+    #burger {
+        display: block;
+        background-color: var(--cor0);
+        color: white;
+        padding-left: 13px;
+    }
+
+    #burger:hover {
+        cursor: pointer;
+    }
+
+    menu {
+        display: none;
+    }
+
+    menu > ul > li {
+        display: block;
+        border-bottom: 1px solid white;
+        padding: 13px;
+    }
+
+    menu a:hover {
+        transition: 0.35s;
+        background-color: transparent;
+        filter: drop-shadow(2px -2px 5px #6978ff7a);
+    }
+
+    menu li:hover {
+        background-color: var(--cor3);
+    }
+}

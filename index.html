@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio ViniciusViana73</title>
+    <link rel="shortcut icon" href="assets/imgs/fav.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/mediaquery.css">
+</head>
+<body onresize="changeSize()">
+    <header>
+        <h1>Meu portfolio</h1>
+    </header>
+    <span id="burger" class="material-symbols-outlined" onclick="clickMenu()">menu</span>
+    <menu id="topmenu">
+        <ul>
+            <li>
+                <a href="#aboutMe" title="Informações sobre minha pessoa">Sobre mim</a>
+            </li>
+            <li>
+                <a href="#languages" title="Minhas habilidades">Habilidades</a>
+            </li>
+            <li>
+                <a href="#myProjects" title="Meus projetos feitos">Projetos</a>
+            </li>
+            <li>
+                <a href="#findMe" title="Onde me encontrar">Redes</a>
+            </li>
+        </ul>
+    </menu>
+    <main>
+        <section id="aboutMe">
+            <h2>Sobre mim</h2>
+            <div id="contentAboutMe">
+                <img src="/assets/imgs/eubonitao.png" alt="My profile pic">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam sit qui temporibus iusto, accusantium dolorum itaque possimus totam nisi deleniti libero recusandae velit odit quia nobis animi illo illum cum quasi amet dolorem. Assumenda tenetur ad ex rem quae odio nulla libero. Temporibus hic laboriosam quasi ullam porro vero! Tempore ea delectus repellendus pariatur itaque exercitationem facilis voluptatibus recusandae, laboriosam accusamus corporis rerum aspernatur tenetur a consequuntur voluptatum qui harum facere eum sint iure. Mollitia nostrum cum quos error maxime.</p>
+            </div>
+        </section>
+        <section id="languages">
+            <h2>Habilidades</h2>
+            <p id="pSkills">
+                Passe cursor do mouse sobre os cards para visualizar.
+            </p>
+            <div id="skills">
+                <span class="linguagem" id="js">
+                    <img src="/assets/imgs/js.png" alt="Logo Javascript">
+                    <p>JavaScript</p>
+                </span>
+                <span class="linguagem" id="node">
+                    <img src="/assets/imgs/node.png" alt="Logo Node">
+                    <p>Node.js</p>
+                </span>
+                <span class="linguagem" id="html">
+                    <img src="/assets/imgs/html.png" alt="Logo HTML5">
+                    <p>HTML5</p>
+                </span>
+                <span class="linguagem" id="css">
+                    <img src="/assets/imgs/css.png" alt="Logo CSS3">
+                    <p>CSS3</p>
+                </span>
+                <span class="linguagem" id="mongodb">
+                    <img src="assets/imgs/mongodb.png" alt="Logo MondoDB">
+                    <p>MongoDB</p>
+                </span>
+                <span class="linguagem" id="java">
+                    <img src="/assets/imgs/java.png" alt="Logo Java">
+                    <p>Java</p>
+                </span>
+                <span class="linguagem" id="pgadmin">
+                    <img src="assets/imgs/pgadmin.png" alt="Logo Postgres">
+                    <p>Postgres</p>
+                </span>
+            </div>
+            <div id="sobreLinguagem"></div>
+        </section>
+        <section id="myProjects">
+            <h2>Meus Projetos</h2>
+            <div id="projetos">
+                <span class="project">
+                    <h3>PROJETO 01</h3> <br>
+                    <p>Loading.....</p>
+                </span>
+                <span class="project">
+                    <h3>PROJETO 02</h3> <br>
+                    <p>Loading.....</p>
+                </span>
+                <span class="project">
+                    <h3>PROJETO 03</h3> <br>
+                    <p>Loading.....</p>
+                </span>
+                <span class="project">
+                    <h3>PROJETO 04</h3> <br>
+                    <p>Loading.....</p>
+                </span>
+            </div>
+        </section>
+        <section id="findMe">
+            <h2>Onde me encontrar?</h2>
+            <p>(Clique sobre o ícone para abrir)</p>
+            <div id="redes">
+                <span class="rsocial"><p class="socialTitle" title="Um pouco mais abaixo!">GITHUB</p>
+                    <a href="https://github.com/viniciusviana73" target=”_blank”><img class="socialIcon" src="assets/imgs/github.png" alt="GitHub icon" title="Clique para abrir meu GitHub"></a>
+                </span>
+                <span class="rsocial"><p class="socialTitle" title="Um pouco mais abaixo!">LINKEDIN</p>
+                    <a href="https://www.linkedin.com/in/vinicius-viana-1593a523a/" target=”_blank”><img class="socialIcon" src="assets/imgs/linkedin.png" alt="Linkedin Icon" title="Clique para abrir meu Linkedin"></a>
+                </span>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Feito por <a href="https://github.com/viniciusviana73" target=”_blank”>Vinicius Viana</a> | Hospedado no <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+    </footer>
+    <script src="assets/script/languageshover.js"></script>
+    <script src="assets/script/menu.js"></script>
+</body>
+</html>
