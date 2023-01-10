@@ -29,4 +29,18 @@
     menu li:hover {
         background-color: var(--cor3);
     }
+
+    .linguagem {
+        height: 130px;
+        width: 130px;
+    }
+
+    .linguagem > img {
+        max-height: 80px;
+    }
+
+    .project {
+        max-width: 280px;
+        height: 280px;
+    }
 }
