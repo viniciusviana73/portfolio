@@ -43,4 +43,21 @@
         max-width: 280px;
         height: 280px;
     }
+
+    .rsocial {
+        margin: 5px;
+        padding-bottom: 50px;
+    }
+
+    .socialSub {
+        font-size: 1.05em;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    #ghPages {
+        display: none;
+    }
 }
