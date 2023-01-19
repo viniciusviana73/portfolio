@@ -3,7 +3,7 @@
         display: block;
         background-color: var(--cor0);
         color: white;
-        padding-left: 13px;
+        padding-left: 15px;
     }
 
     #burger:hover {
@@ -11,13 +11,17 @@
     }
 
     menu {
-        display: none;
+        display: none; 
     }
 
     menu > ul > li {
         display: block;
         border-bottom: 1px solid white;
-        padding: 13px;
+        padding: 5px;
+    }
+
+    menu a {
+        display: block;
     }
 
     menu a:hover {
@@ -28,6 +32,10 @@
 
     menu li:hover {
         background-color: var(--cor3);
+    }
+
+    #pSkills {
+        padding: 10px;
     }
 
     .linguagem {
