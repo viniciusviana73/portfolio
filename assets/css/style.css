@@ -11,27 +11,29 @@
 }
 
 :root {
-    /* Dark Blue
-    --cor0: #010F33;
-    --cor1: #18274D;
-    --cor2: #284080;
-    --cor3: #012580;
-    --cor4: #023BCC;
+    /*   Light Mode   */
+    --light0: white;
+    --light1: white;
+    --light2: white;
+    --light3: white;
+    --light4: white;
 
-    Font imports: 
-    font-family: 'Inconsolata', monospace;
-    */
+    --lightgrad0: white;
+    --lightbgrad1: white;
+    --lightbgrad2: white;
+    --lightbgrad3: white;
 
-    --cor0: #25252b;
-    --cor1: #23274e;
-    --cor2: #5460CC;
-    --cor3: #6978FF;
-    --cor4: #B5BCFF;
+    /*   Dark Mode   */
+    --dark0: #25252b;
+    --dark1: #23274e;
+    --dark2: #5460CC;
+    --dark3: #6978FF;
+    --dark4: #B5BCFF;
 
-    --bggrad0: #242058;
-    --bggrad1: #212546;
-    --bggrad2: #15182e;
-    --bggrad3: #25252b;
+    --darkbgrad0: #242058;
+    --darkbgrad1: #212546;
+    --darkbgrad2: #15182e;
+    --darkbgrad3: #25252b;
 }
 
 html {
@@ -67,20 +69,27 @@ html {
 body {
     background-color: #15172c;
     background-size: 300% 300%;
-    background-image: linear-gradient(-45deg, 
-                                    var(--bggrad0) 0%, 
-                                    var(--bggrad1) 40%, 
-                                    var(--bggrad2) 61%, 
-                                    var(--bggrad3) 100%
-                                     );      
+    background-image: linear-gradient(-45deg,
+            var(--darkbgrad0) 0%,
+            var(--darkbgrad1) 40%,
+            var(--darkbgrad2) 61%,
+            var(--darkbgrad3) 100%);
     animation: AnimateBG 6s ease infinite;
 }
 
-@keyframes AnimateBG { 
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
-  }
+@keyframes AnimateBG {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
 
 header {
     background-image: linear-gradient(to bottom, rgb(21, 22, 31) 1%, #25252B 50%);
@@ -89,9 +98,85 @@ header {
     font-family: 'Inconsolata', monospace;
 }
 
-header > h1 {
+header>h1 {
     text-align: center;
     padding: 30px;
+}
+
+#switchBt {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--dark0);
+    -webkit-transition: .2s;
+    transition: .1.8s;
+}
+
+#switchBt input + .slider {
+    background: url('../imgs/darkmode.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#switchBt input:checked + .slider {
+    background: url('../imgs/sunmode1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#switchBt input:checked + .slider:before {
+    background-color: var(--light0);
+}
+
+#switchBt input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 #burger {
@@ -100,22 +185,22 @@ header > h1 {
 
 menu {
     box-shadow: 0px 9px 10px 0px rgb(0 0 0 / 29%);
-    background-color: var(--cor0);
+    background-color: var(--dark0);
     display: flex;
     justify-content: center;
     padding: 15px;
 }
 
-menu > ul {
+menu>ul {
     list-style-type: none;
     text-align: center;
 }
 
-menu > ul > li {
+menu>ul>li {
     display: inline-block;
 }
 
-menu > ul > li > a {
+menu>ul>li>a {
     margin: 5px 15px;
     border-radius: 10px;
     padding: 10px;
@@ -127,7 +212,7 @@ menu > ul > li > a {
 
 menu a:hover {
     transition: 0.15s;
-    background-color: var(--cor3);
+    background-color: var(--dark3);
     filter: drop-shadow(2px -2px 5px #6978ff7a);
     font-size: 1.2em;
 }
@@ -139,7 +224,7 @@ main {
 }
 
 section#aboutMe {
-    background-image: linear-gradient(to bottom, var(--cor0) 5%, var(--cor1) 100%);
+    background-image: linear-gradient(to bottom, var(--dark0) 5%, var(--dark1) 100%);
     padding: 15px;
     margin: auto;
 }
@@ -176,7 +261,7 @@ section#aboutMe p {
 }
 
 section#languages {
-    background-image: linear-gradient(to bottom, var(--cor1) 5%, var(--cor0) 100%);
+    background-image: linear-gradient(to bottom, var(--dark1) 5%, var(--dark0) 100%);
     padding: 30px 0px 25px 0px;
 }
 
@@ -195,14 +280,14 @@ div#skills {
 .linguagem {
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.5);
     margin: 20px;
-    background-color: var(--cor0);
+    background-color: var(--dark0);
     height: 185px;
     width: 185px;
     border-radius: 20px 7px;
     transition: 0.2s;
 }
 
-.linguagem > img {
+.linguagem>img {
     filter: drop-shadow(2px -10px 10px rgba(5, 5, 5, 0.45));
     padding-top: 10px;
     display: block;
@@ -210,7 +295,7 @@ div#skills {
     max-height: 130px;
 }
 
-.linguagem > p {
+.linguagem>p {
     padding: 10px;
     color: white;
     text-align: center;
@@ -220,7 +305,7 @@ div#skills {
 .linguagem:hover {
     filter: drop-shadow(2px 0px 10px #d8e8f57a);
     transition: 0.25s;
-    background-color: var(--bggrad2);
+    background-color: var(--darkbgrad2);
     padding: 10px;
     margin: 10px;
 }
@@ -236,17 +321,17 @@ div#skills {
     font-size: 1.5em;
     max-width: 860px;
     margin: 15px 25px;
-    background-color: var(--cor0);
+    background-color: var(--dark0);
     text-align: justify;
 }
 
-#sobreLinguagem > h3 {
+#sobreLinguagem>h3 {
     font-size: 1.1em;
     padding-top: 20px;
     padding-left: 10px;
 }
 
-#sobreLinguagem > p {
+#sobreLinguagem>p {
     padding: 20px;
     font-size: 0.8em;
     text-align: justify;
@@ -254,7 +339,7 @@ div#skills {
 }
 
 #myProjects {
-    background-color: var(--cor0);
+    background-color: var(--dark0);
 }
 
 #projetos {
@@ -264,8 +349,8 @@ div#skills {
 
 .project {
     display: inline-block;
-    background-color: var(--cor0);
-    border: 2px solid var(--cor2);
+    background-color: var(--dark0);
+    border: 2px solid var(--dark2);
     border-radius: 20px 5px 10px 5px;
     width: 350px;
     height: 200px;
@@ -273,17 +358,17 @@ div#skills {
     color: white;
 }
 
-.project > h3 {
+.project>h3 {
     padding: 15px;
 }
 
 #findMe {
     padding: 20px 0px 40px 0px;
-    background-color: var(--cor0);
-    background-image: linear-gradient(to bottom, var(--cor0) 85%, #1010139d 100%);
+    background-color: var(--dark0);
+    background-image: linear-gradient(to bottom, var(--dark0) 85%, #1010139d 100%);
 }
 
-#findMe > p {
+#findMe>p {
     color: white;
     text-align: center;
     margin-top: -7px;
@@ -321,16 +406,17 @@ div#skills {
 .socialTitle {
     text-align: center;
     font-weight: bold;
-    color: var(--cor4);
+    color: var(--dark4);
     padding: 10px;
     font-size: 1.27em;
-    filter: drop-shadow(2px 2px 5px var(--cor2));
+    filter: drop-shadow(2px 2px 5px var(--dark2));
 }
 
 .socialSub {
     padding-top: 10px;
     color: rgb(210, 210, 210);
-    font: 1em 'Rowdies', cursive;;
+    font: 1em 'Rowdies', cursive;
+    ;
     text-align: center;
 }
 
@@ -344,9 +430,39 @@ footer {
 footer a {
     font-weight: bold;
     text-decoration: none;
-    color: var(--cor4);
+    color: var(--dark4);
 }
 
 footer a:hover {
     text-decoration: underline;
+}
+
+/*   Light Settings   */
+
+.lightcolor0 {
+    color: var(--light0);
+}
+
+.lightcolor1 {
+    color: var(--light1);
+}
+
+.lightcolor2 {
+    color: var(--light2);
+}
+
+.lightcolor3 {
+    color: var(--light3);
+}
+
+.lightcolor4 {
+    color: var(--light4);
+}
+
+body.light {
+    background-image: linear-gradient(-45deg,
+            var(--lightbgrad0) 0%,
+            var(--lightbgrad1) 40%,
+            var(--lightbgrad2) 61%,
+            var(--lightbgrad3) 100%);
 }
