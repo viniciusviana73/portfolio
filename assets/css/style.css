@@ -15,8 +15,8 @@
     --light0: #fffffff3;
     --light1: #f3f3f3;
     --light2: #cacaca;
-    --light3: #aaaaaa;
-    --light4: #838383;
+    --light3: #8d8d8d;
+    --light4: #383838;
 
     --lightgrad0: rgb(255, 255, 255);
     --lightbgrad1: rgb(180, 180, 180);
@@ -442,8 +442,7 @@ body.light {
 }
 
 body.light h1, 
-body.light h2, 
-body.light h3 {
+body.light h2{
     color: black;
 }
 
@@ -487,7 +486,7 @@ section#languages.light .linguagem {
 }
 
 section#languages.light #sobreLinguagem {
-    background-color: gray;
+    background-color: var(--light4);
     border: 1px solid var(--darkbgrad2);
 }
 
