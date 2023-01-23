@@ -12,16 +12,16 @@
 
 :root {
     /*   Light Mode   */
-    --light0: white;
-    --light1: white;
-    --light2: white;
-    --light3: white;
-    --light4: white;
+    --light0: #fffffff3;
+    --light1: #f3f3f3;
+    --light2: #cacaca;
+    --light3: #aaaaaa;
+    --light4: #838383;
 
-    --lightgrad0: white;
-    --lightbgrad1: white;
-    --lightbgrad2: white;
-    --lightbgrad3: white;
+    --lightgrad0: rgb(255, 255, 255);
+    --lightbgrad1: rgb(180, 180, 180);
+    --lightbgrad2: rgb(104, 104, 104);
+    --lightbgrad3: rgb(59, 59, 59);
 
     /*   Dark Mode   */
     --dark0: #25252b;
@@ -59,7 +59,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: #dad5a7;
+    background-color: #3b3b3b;
 }
 
 ::selection {
@@ -67,7 +67,6 @@ html {
 }
 
 body {
-    background-color: #15172c;
     background-size: 300% 300%;
     background-image: linear-gradient(-45deg,
             var(--darkbgrad0) 0%,
@@ -107,10 +106,8 @@ header>h1 {
     position: absolute;
     top: 20px;
     right: 15px;
-    display: none;
 }
 
-/* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
@@ -118,14 +115,12 @@ header>h1 {
     height: 25px;
 }
 
-/* Hide default HTML checkbox */
 .switch input {
     opacity: 0;
     width: 0;
     height: 0;
 }
 
-/* The slider */
 .slider {
     position: absolute;
     cursor: pointer;
@@ -156,7 +151,7 @@ header>h1 {
 }
 
 #switchBt input:checked + .slider {
-    background: url('../imgs/sunmode1.jpg') no-repeat center;
+    background: url('../imgs/lightmode.jpg') no-repeat center;
     background-size: cover;
 }
 
@@ -170,7 +165,6 @@ header>h1 {
     transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
     border-radius: 34px;
 }
@@ -320,7 +314,7 @@ div#skills {
     box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.5);
     font-size: 1.5em;
     max-width: 860px;
-    margin: 15px 25px;
+    margin: 15px auto;
     background-color: var(--dark0);
     text-align: justify;
 }
@@ -439,30 +433,88 @@ footer a:hover {
 
 /*   Light Settings   */
 
-.lightcolor0 {
-    color: var(--light0);
-}
-
-.lightcolor1 {
-    color: var(--light1);
-}
-
-.lightcolor2 {
-    color: var(--light2);
-}
-
-.lightcolor3 {
-    color: var(--light3);
-}
-
-.lightcolor4 {
-    color: var(--light4);
-}
-
 body.light {
     background-image: linear-gradient(-45deg,
-            var(--lightbgrad0) 0%,
-            var(--lightbgrad1) 40%,
-            var(--lightbgrad2) 61%,
-            var(--lightbgrad3) 100%);
+                                    #000000 10%,
+                                    #141414 40%,
+                                    var(--darkbgrad2) 61%,
+                                    var(--darkbgrad3) 100%);
+}
+
+body.light h1, 
+body.light h2, 
+body.light h3 {
+    color: black;
+}
+
+header.light {
+    background-image: linear-gradient(to bottom, var(--light0) 20%, var(--light1) 100%);
+}
+
+#burger.light { 
+    background-color: var(--light1);
+    color: black;
+}
+
+menu.light {
+    background-color: var(--light1);
+}
+
+menu.light > ul > li > a {
+    color: black;
+}
+
+section#aboutMe.light {
+    background-image: linear-gradient(to bottom, var(--light1) 50%, var(--light0) 100%);
+}
+
+section#aboutMe.light p {
+    color: black;
+}
+
+section#languages.light {
+    color: black;
+    background-image: linear-gradient(to bottom, var(--light0) 1%, var(--light1) 100%);
+}
+
+section#languages.light #pSkills {
+    color: black;
+}
+
+section#languages.light .linguagem {
+    box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.5);
+    background-color: var(--light4);
+}
+
+section#languages.light #sobreLinguagem {
+    background-color: gray;
+    border: 1px solid var(--darkbgrad2);
+}
+
+section#myProjects.light {
+    background-image: linear-gradient(to bottom, var(--light1) 50%, var(--light0) 100%);
+}
+
+section#myProjects.light .project {
+    background-color: var(--light4);
+}
+
+section#findMe.light {
+    background-image: linear-gradient(to bottom, var(--light0) 1%, #f3f3f3 100%);
+}
+
+section#findMe.light p {
+    color: black;
+}
+
+section#findMe.light .socialTitle {
+    filter: drop-shadow(2px 2px 20px var(--dark0));
+}
+
+section#findMe.light .socialIcon:hover {
+    filter: drop-shadow(3px 3px 5px var(--dark0));
+}
+
+footer.light p {
+    color: white;
 }
