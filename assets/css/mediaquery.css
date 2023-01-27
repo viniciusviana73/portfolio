@@ -47,6 +47,10 @@
         max-height: 80px;
     }
 
+    #sobreLinguagem {
+        width: 80vw;
+    }
+
     .project {
         max-width: 280px;
         height: 280px;
