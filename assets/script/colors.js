@@ -9,6 +9,7 @@ mode.onclick = () => {
     header.classList.toggle('light')
     menu.classList.toggle('light')
     burger.classList.toggle('light')
+    bMenu.classList.toggle('light')
     for (let p = 0; p < sections.length; p++) {
         sections[p].classList.toggle('light')
     }

@@ -493,8 +493,11 @@ header.light {
     background-image: linear-gradient(to bottom, var(--light0) 20%, var(--light1) 100%);
 }
 
-#burger.light { 
+div#bMenu.light {
     background-color: var(--light1);
+}
+
+#burger.light { 
     color: black;
 }
 

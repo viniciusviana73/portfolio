@@ -1,7 +1,11 @@
 @media screen and (max-width: 600px) {
-    #burger {
-        display: block;
+
+    div#bMenu {
         background-color: var(--dark0);
+    }
+
+    #burger {
+        display: inline;
         color: white;
         padding-left: 15px;
     }
