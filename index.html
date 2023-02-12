@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/mediaquery.css">
 </head>
-<body onresize="changeSize()">
+<body onresize="changeSize()" onload="reveal()">
     <header>
-        <h1>Meu portfolio</h1>
-        <div id="switchBt" title="Alterar entre tema dark/light">
+        <h1 class="reveal fade-right">Meu portfolio</h1>
+        <div id="switchBt" class="reveal fade-right" title="Alterar entre tema dark/light">
             <label class="switch">
                 <input type="checkbox" id="cmode">
                 <span class="slider round"></span>
@@ -41,8 +41,8 @@
     </menu>
     <main>
         <section id="aboutMe">
-            <h2>Sobre mim</h2>
-            <div id="contentAboutMe">
+            <h2 class="reveal fade-left">Sobre mim</h2>
+            <div id="contentAboutMe" class="reveal fade-left">
                 <img src="assets/imgs/eubonitao.png" alt="My profile pic">
                 <p>
                     Olá, mundo! Meu nome é Vinicius, tenho 22 anos. Sou estudante na Universidade Tecnológica Federal do Paraná (UTFPR). Estou cursando Análise e Desenvolvimento de Sistemas. Amante da tecnologia desde pequenino. 
@@ -57,7 +57,7 @@
             <p id="pSkills">
                 Passe o cursor do mouse ou clique sobre os cards para visualizar.
             </p>
-            <div id="skills">
+            <div id="skills" class="reveal fade-left">
                 <span class="linguagem" id="js">
                     <img src="assets/imgs/js.png" alt="Logo Javascript">
                     <p>JavaScript</p>
@@ -92,7 +92,7 @@
         <section id="myProjects">
             <h2>Meus Projetos</h2>
             <div id="projetos">
-                <span class="project">
+                <span class="project reveal fade-left">
                     <h3>CRUD de Usuários (WEB)</h3>
                     <a href="https://github.com/viniciusviana73/users-crud-express" target="_blank">
                         Repositório do Projeto
@@ -109,15 +109,15 @@
                         <li>CSS3</li>
                     </ul>
                 </span>
-                <span class="project">
+                <span class="project reveal fade-right">
                     <h3>PROJETO 02</h3>
                     <p>Loading.....</p>
                 </span>
-                <span class="project">
+                <span class="project reveal">
                     <h3>PROJETO 03</h3>
                     <p>Loading.....</p>
                 </span>
-                <span class="project">
+                <span class="project reveal">
                     <h3>PROJETO 04</h3>
                     <p>Loading.....</p>
                 </span>
@@ -126,7 +126,7 @@
         <section id="findMe">
             <h2>Onde me encontrar?</h2>
             <p>(Clique sobre o ícone para abrir)</p>
-            <div id="redes">
+            <div id="redes" class="reveal fade-bottom">
                 <span class="rsocial"><p class="socialTitle" title="Um pouco mais abaixo!">GITHUB</p>
                     <a href="https://github.com/viniciusviana73" target=”_blank”><img class="socialIcon" src="assets/imgs/github.png" alt="GitHub icon" title="Clique para abrir meu GitHub"></a>
                     <p class="socialSub">/viniciusviana73</p>
@@ -155,5 +155,6 @@
     <script src="assets/script/languageshover.js"></script>
     <script src="assets/script/menu.js"></script>
     <script src="assets/script/colors.js"></script>
+    <script src="assets/script/scroll.js"></script>
 </body>
 </html>
